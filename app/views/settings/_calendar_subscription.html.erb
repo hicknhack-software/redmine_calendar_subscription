@@ -1,0 +1,13 @@
+<h3><%= l(:calender_subscription_settings_header) %></h3>
+<p>
+  <%= label_tag 'settings[past_days]', l(:calender_subscription_settings_past_days_label) %>
+  <%= text_field_tag 'settings[past_days]', @settings[:past_days], :size => 3 %>
+</p>
+<p>
+  <%= label_tag 'settings[future_days]', l(:calender_subscription_settings_future_days_label) %>
+  <%= text_field_tag 'settings[future_days]', @settings[:future_days], :size => 3 %>
+</p>
+<p>
+  <%= label_tag 'settings[maximum_issues]', l(:calender_subscription_settings_maximum_issues_label) %>
+  <%= text_field_tag 'settings[maximum_issues]', @settings[:maximum_issues], :size => 5 %>
+</p>

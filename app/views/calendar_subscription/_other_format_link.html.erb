@@ -1,0 +1,8 @@
+<% if User.current.allowed_to?(:subscribe_calendar, project, :global => true)%>
+ <% ical_url = calendar_subscription_url(params.except('controller','page').merge(:key => User.current.rss_key, :format => 'ics')) %>
+ <%= javascript_tag do %>
+  $(function() {
+    $('.other-formats').append(<%= raw (content_tag 'span', (link_to 'iCal', ical_url, :rel => 'nofollow', :style => 'ics')).to_json %>);
+   });
+ <% end %>
+<% end %>

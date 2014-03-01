@@ -1,0 +1,6 @@
+<% if User.current.allowed_to?(:subscribe_calendar, project, :global => true)%>
+ <% ical_url = project_calendar_subscription_url(:project_id => project.identifier, :key => User.current.rss_key, :format => 'ics', :set_filter => 1) %>
+ <h3><%= l(:label_calendar) %></h3>
+ <!--<p><%= l(:description_subscribe_calendar_link) %></p>-->
+ <p><%= link_to l(:label_subscribe_calendar_link), ical_url %></p>
+<% end %>

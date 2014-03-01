@@ -1,0 +1,11 @@
+# German strings go here for Rails i18n
+de:
+  project_module_calendar_subscription_plugin: Kalender Abonnement
+  permission_subscribe_calendar: Kalender abonnieren
+
+  label_subscribe_calendar_link: iCalender-Link
+
+  calender_subscription_settings_header: Kalender Abo Einstellungen
+  calender_subscription_settings_past_days_label: Maximale Anzahl Tage in der Vergangenheit
+  calender_subscription_settings_future_days_label: Maximale Anzahl Tage in der Zukunft
+  calender_subscription_settings_maximum_issues_label: Maximale Anzahl Tickets
