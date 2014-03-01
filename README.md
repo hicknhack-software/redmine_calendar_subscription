@@ -5,7 +5,7 @@
 
 Calendar subscription is a Redmine plugin that helps you keep an overview over the planned issues.
 
-It enchances the planning capabilities of Redmine to times and provides ICS calendar subscriptions for projects, filters or the entire Redmine installation.
+It enhances the planning capabilities of Redmine to times and provides ICS calendar subscriptions for projects, filters or the entire Redmine installation.
 
 ## Features
 
@@ -19,6 +19,7 @@ It enchances the planning capabilities of Redmine to times and provides ICS cale
 Most current version is available at: [GitHub](https://github.com/hicknhack-software/redmine_calendar_subscription).
 
 ## Requirements
+
 * Redmine 2.4.x
 
 ## Install
@@ -40,9 +41,14 @@ Most current version is available at: [GitHub](https://github.com/hicknhack-soft
 
 ## Usage
 
-To be able to use a calendar subscriptions, a user must have the permissions, to view the tickets and the 'subscribe calendar' permission.
+Permissions required to perform a calendar subscriptions
 
-This plugin provides a variety calendars
+* view the tickets
+* the project has the 'Calendar Subscription'-module
+* 'subscribe_calendar' permission for the current user
+
+If the right permissions are provided, you get access these calendar subscriptions:
+
 1. On the project overview page you get a calendar link to all open tickets of your poject
 1. At the bottom of each tickets list you have the option to create a calendar with the current filter options
 1. If you go to /issues of your redmine you can view all the tickets you have access to. There you can get a link to all your tickets.
