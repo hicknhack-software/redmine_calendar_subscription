@@ -5,7 +5,7 @@
 
 Calendar subscription is a Redmine plugin that helps you keep an overview over the planned issues.
 
-It enchances the planning capabilities of Redmine to times and provides ICS calendar subscriptions for projects, filters or the entire redmine installation.
+It enhances the planning capabilities of Redmine to times and provides ICS calendar subscriptions for projects, filters or the entire redmine installation.
 
 ## Features
 
