@@ -7,7 +7,7 @@ class DateTimeValidator < ActiveModel::EachValidator
     before_type_cast = record.attributes_before_type_cast[attribute.to_s]
     if before_type_cast.is_a?(String) && before_type_cast.present?
       # TODO: #*_date_before_type_cast returns a Mysql::Time with ruby1.8+mysql gem
-      unless before_type_cast =~ /\A\d{4}-\d{2}-\d{2}( \d{2}:\d{2}:\d{2}( \+?\d{4})?)?\z/ && value
+      unless before_type_cast =~ /\A\d{4}-\d{2}-\d{2}( \d{2}:\d{2}(:\d{2})?( [+-]?\d{2}:?\d{2})?)?\z/ && value
         record.errors.add attribute, :not_a_date
       end
     end
@@ -55,8 +55,8 @@ module CalendarSubscription
         if detail.property == 'attr' && detail.prop_key == 'due_date'
           field = detail.prop_key.to_s.gsub(/\_id$/, "")
           label = l(("field_" + field).to_sym)
-          value = format_time(detail.value.to_time) if detail.value
-          old_value = format_time(detail.old_value.to_time) if detail.old_value
+          value = format_date(detail.value.to_time) if detail.value
+          old_value = format_date(detail.old_value.to_time) if detail.old_value
         else
           return show_detail_before_cs(detail, no_html, options)
         end

@@ -4,8 +4,10 @@ ActiveSupport::Dependencies.autoload_paths << File.join(File.dirname(__FILE__), 
 
 require 'redmine'
 
+require 'calendar_subscription/i18n_patch'
+require 'calendar_subscription/application_helper_patch'
+require 'calendar_subscription/application_controller_patch'
 require 'calendar_subscription/issue_patch'
-require 'calendar_subscription/controller_patch'
 require 'calendar_subscription/hooks'
 
 Redmine::Plugin.register :redmine_calendar_subscription do

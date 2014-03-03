@@ -1,0 +1,6 @@
+/* customized styles for timepicker */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; margin-left: 25px; }
+.ui-timepicker-div dl dt { display: none; }
+.ui-timepicker-div dl dd { float: left; margin: 0 0 0 5px; }
+.ui-timepicker-div dl dd.ui_tpicker_minute { float: none; }

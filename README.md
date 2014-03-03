@@ -51,7 +51,10 @@ If the right permissions are provided, you get access these calendar subscriptio
 
 1. On the project overview page you get a calendar link to all open tickets of your poject
 1. At the bottom of each tickets list you have the option to create a calendar with the current filter options
-1. If you go to /issues of your redmine you can view all the tickets you have access to. There you can get a link to all your tickets.
+1. Top menu "Projects" - "Show all issues" allows you to view all the tickets you have access to. At the bottom you can get a link to a calendar as well.
+
+You can take these links and subscribe to them.
+See http://mcb.berkeley.edu/academic-programs/seminars/ical-feed-instructions/ for a good instruction set.
 
 ###Settings
 
@@ -59,4 +62,5 @@ The plugin offers a list of settings at the Redmine roles and permission setting
 
 ## Version History
 
+* 0.2.0 improved due_date with time usability with the timepicker plugin
 * 0.1.0 initial release (after an idea of ZwoBit GbR)

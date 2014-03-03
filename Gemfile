@@ -1,4 +1,4 @@
-gem 'icalendar', '1.5.0'
+gem 'icalendar', '~> 1.5.0'
 
 group :test do
   gem 'test-unit'
