@@ -1,10 +1,11 @@
 require 'redmine/i18n'
 
 module CalendarSubscription
-  module I18n
+  module I18nPatch
     extend ActiveSupport::Concern
 
     included do
+      unloadable
       alias_method_chain :format_date, :time_support
       @@in_formate_date = false
     end
@@ -24,4 +25,6 @@ module CalendarSubscription
   end
 end
 
-Redmine::I18n.send :include, CalendarSubscription::I18n
+unless Redmine::I18n.included_modules.include?(CalendarSubscription::I18nPatch)
+  Redmine::I18n.send :include, CalendarSubscription::I18nPatch
+end

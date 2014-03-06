@@ -5,6 +5,7 @@ module CalendarSubscription
     extend ActiveSupport::Concern
 
     included do
+      unloadable
       alias_method_chain :find_current_user, :ics
     end
 
@@ -19,4 +20,6 @@ module CalendarSubscription
   end
 end
 
-ApplicationController.send(:include, CalendarSubscription::ApplicationControllerPatch)
+unless ApplicationController.included_modules.include?(CalendarSubscription::ApplicationControllerPatch)
+  ApplicationController.send(:include, CalendarSubscription::ApplicationControllerPatch)
+end

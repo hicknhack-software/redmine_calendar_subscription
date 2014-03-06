@@ -62,5 +62,6 @@ The plugin offers a list of settings at the Redmine roles and permission setting
 
 ## Version History
 
+* 0.3.0 improved compatibility with other plugins
 * 0.2.0 improved due_date with time usability with the timepicker plugin
 * 0.1.0 initial release (based on an idea from ZwoBit GbR)

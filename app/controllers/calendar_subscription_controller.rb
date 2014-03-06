@@ -45,7 +45,7 @@ class CalendarSubscriptionController < ApplicationController
     event.uid = issue_url(issue, plugin: 'redmine_calendar_subscription')
     event.url = issue_url(issue)
 
-    event.summary = "#{issue.tracker.name}: #{issue.subject} (##{issue.id})"
+    event.summary = "[#{issue.project.name}] #{issue.tracker.name}: #{issue.subject} (##{issue.id})"
     event.description = issue.description unless issue.description.blank?
     event.priority = ics_priority issue.priority
     event.sequence = issue.lock_version
@@ -54,7 +54,6 @@ class CalendarSubscriptionController < ApplicationController
     else
       event.add_category "#{issue.project.name} - #{issue.fixed_version.name}"
     end
-
 
     event.created = issue.created_on.to_s(:ical)
     event.last_modified = issue.updated_on.to_s(:ical) unless issue.updated_on.nil?

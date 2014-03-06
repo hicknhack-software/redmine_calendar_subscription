@@ -1,14 +1,4 @@
 # encoding: utf-8
-Rails.logger.info 'Starting Calendar Subscription plugin for Redmine'
-ActiveSupport::Dependencies.autoload_paths << File.join(File.dirname(__FILE__), 'app/concerns')
-
-require 'redmine'
-
-require 'calendar_subscription/i18n_patch'
-require 'calendar_subscription/application_helper_patch'
-require 'calendar_subscription/application_controller_patch'
-require 'calendar_subscription/issue_patch'
-require 'calendar_subscription/hooks'
 
 Redmine::Plugin.register :redmine_calendar_subscription do
   name 'Redmine Calendar Subscription plugin'
@@ -16,7 +6,7 @@ Redmine::Plugin.register :redmine_calendar_subscription do
   author 'HicknHack Software GmbH'
   author_url 'http://www.hicknhack-software.com'
   description 'Enables calendar subscriptions to planned issue resolutions'
-  version '0.1.0'
+  version '0.3.0'
 
   requires_redmine :version_or_higher => '2.4.0'
 
@@ -28,3 +18,5 @@ Redmine::Plugin.register :redmine_calendar_subscription do
     end
   end
 end
+
+require 'redmine_calendar_subscription'
