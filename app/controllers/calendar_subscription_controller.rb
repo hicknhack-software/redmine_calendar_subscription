@@ -22,7 +22,7 @@ class CalendarSubscriptionController < ApplicationController
 
     if @query.valid?
       issues = @query.issues(:include => [:tracker, :author, :assigned_to, :priority, :fixed_version],
-                             :conditions => ["(due_date BETWEEN ? AND ?)", start_date, end_date],
+                             :conditions => Issue.arel_table[:due_date].in(start_date..end_date).and(Issue.arel_table[Issue.left_column_name].eq(Issue.arel_table[Issue.right_column_name] - 1)),
                              :limit => limit, :offset => 0)
       issues.each do |issue|
         next unless issue.due_date && issue.estimated_hours
