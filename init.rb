@@ -6,7 +6,7 @@ Redmine::Plugin.register :redmine_calendar_subscription do
   author 'HicknHack Software GmbH'
   author_url 'http://www.hicknhack-software.com'
   description 'Enables calendar subscriptions to planned issue resolutions'
-  version '0.3.0'
+  version '0.3.1'
 
   requires_redmine :version_or_higher => '2.4.0'
 
